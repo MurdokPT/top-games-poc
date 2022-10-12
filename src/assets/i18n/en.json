@@ -1,0 +1,15 @@
+{
+    "top_games_label": "Top Games",
+    "new_games_label": "New Games",
+    "slots_label": "Slots",
+    "jackpots_label": "Jackpots",
+    "live_label": "Live",
+    "blackjack_label": "Blackjack",
+    "roulette_label": "Roulette",
+    "table_label": "Table",
+    "poker_label": "Poker",
+    "other_label": "Other",
+    "no_games": "There is no game at this category, Sorry...",
+    "new_label": "NEW",
+    "top_label": "TOP"
+}

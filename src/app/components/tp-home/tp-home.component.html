@@ -1,0 +1,18 @@
+<section class="games-container">
+    <mat-card id="{{game.id}}" *ngFor="let game of gamesData"
+        [ngStyle]="{ 'background-image': 'url(' + game.image + ')'}">
+        <div class="ribbon" *ngIf="checkRibbon(game, 'new')">{{'new_label' | translate}}</div>
+        <div class="ribbon" *ngIf="checkRibbon(game, 'top')">{{'top_label' | translate}}</div>
+        <div class="hover-container">
+            <mat-icon fontIcon="play_arrow"></mat-icon>
+            <p>{{game.name}}</p>
+        </div>
+        <div class="jackpot-container" *ngIf="game.jackpot">
+            <span>{{game.jackpot}}</span>
+        </div>
+    </mat-card>
+</section>
+<section class="no-games" *ngIf="gamesData.length === 0">
+    <mat-icon fontIcon="games"></mat-icon>
+    <h2>{{'no_games' | translate}}</h2>
+</section>

@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <div class="container">
+        <button mat-icon-button class="burguer-menu" aria-label="mobile menu" (click)="isOpen = !isOpen">
+            <mat-icon fontIcon="menu"></mat-icon>
+        </button>
+        <nav [ngClass]="{'open': isOpen}">
+            <button mat-icon-button *ngIf="isOpen" class="close-button" aria-label="close menu"
+                (click)="isOpen = !isOpen">
+                <mat-icon fontIcon="close"></mat-icon>
+            </button>
+            <button *ngFor="let data of navData" [routerLink]="[data.path]" (click)="isOpen = false"
+                routerLinkActive="mat-accent" mat-flat-button color="primary">
+                {{data.label | translate}}
+            </button>
+        </nav>
+    </div>
+</mat-toolbar>

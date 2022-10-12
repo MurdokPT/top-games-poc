@@ -1,0 +1,122 @@
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px;
+
+    .mat-card {
+        width: calc(100% - 16px);
+        padding: 0;
+        margin: 16px 8px;
+        overflow: hidden;
+        position: relative;
+        height: 15vh;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 10px;
+
+        .hover-container {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            vertical-align: middle;
+            color: var(--tp-white);
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .mat-icon {
+                font-size: 4rem;
+                width: 64px;
+                height: 64px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+
+        .jackpot-container{
+            height: 36px;
+            color: var(--tp-white);
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            text-align: center;
+            font-size: 1.4rem;
+
+            span{
+                display: block;
+                line-height: 36px;
+            }
+        }
+    }
+}
+
+.no-games {
+    width: 100%;
+    height: calc(100vh - 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    .mat-icon {
+        font-size: 8rem;
+        width: 128px;
+        height: 128px;
+    }
+}
+
+.ribbon {
+    position: absolute;
+    background: var(--tp-green);
+    color: var(--tp-white);
+    box-shadow: 0 0 0 999px var(--tp-green);
+    clip-path: inset(0 -100%);
+    top: 0;
+    right: 0;
+    inset: 0 0 auto auto;
+    transform-origin: 0 0;
+    transform: translate(29.3%) rotate(45deg);
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .games-container .mat-card{
+        width: calc(50% - 16px);
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .games-container .mat-card{
+        width: calc(33.333% - 16px);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .games-container .mat-card{
+        width: calc(25% - 16px);
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .games-container .mat-card{
+        width: calc(20% - 16px);
+    }
+}
+
